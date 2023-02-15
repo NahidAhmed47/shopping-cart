@@ -27,11 +27,11 @@
 
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button class="btn btn-default"><i class="fas fa-minus"></i></button>
-                           <input type="number" min="0" class="form-control text-center" value="1">
-                           <button class="btn btn-default"><i class="fas fa-plus"></i></button>
+                           <button id="btn-iphone11-minus" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                           <input id="iphone-quantity-count" type="number" min="0" class="form-control text-center" value="1">
+                           <button id="btn-iphone11-plus" class="btn btn-default"><i class="fas fa-plus"></i></button>
                         </div>
-                        <h5>$1219</h5>
+                        <h5>$<span id="iphone11-price">1219</span></h5>
                         <img src="images/remove.png" alt="" class="remove-item">
                      </div>
                   </div>
@@ -45,12 +45,12 @@
                      </div>
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button class="btn btn-default"><i class="fas fa-minus"></i></button>
-                           <input type="number" min="0" class="form-control text-center" value="1">
-                           <button class="btn btn-default"><i class="fas fa-plus"></i></button>
+                           <button id="btn-case-minus" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                           <input id="case-quantity-count" type="number" min="1" class="form-control text-center" value="1">
+                           <button id="btn-case-plus" class="btn btn-default"><i class="fas fa-plus"></i></button>
 
                         </div>
-                        <h5>$59</h5>
+                        <h5>$<span id="case-price">59</span></h5>
                         <img src="images/remove.png" alt="" class="remove-item">
                      </div>
                   </div>
@@ -79,6 +79,10 @@
          </div>
       </div>
    </section>
-</body>
 
+   <!-- JS file -->
+   <script src="js/utilities.js"></script>
+   <script src="js/iphone.js"></script>
+   <script src="js/case.js"></script>
+</body>
 </html>
