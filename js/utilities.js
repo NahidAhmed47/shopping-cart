@@ -26,6 +26,26 @@ function setInnerText(setId, newValue){
         innerText.innerText = 0;
     }
     else{
-        innerText.innerText = newValue;
+            innerText.innerText = newValue;
     }
+}
+
+// find Inner Text Number
+function getInnerTextNumber(id){
+    const getText = document.getElementById(id);
+    const innerNumber = parseInt(getText.innerText);
+    return innerNumber;
+}
+
+// set amount commont function
+function calculateTotalAmount(){
+    const phoneTotal = getInnerTextNumber('iphone11-price');
+    const caseTotal = getInnerTextNumber('case-price');
+    const subTotalPrice = phoneTotal + caseTotal;
+    setInnerText('product-sub-total', subTotalPrice);
+    const taxAmountString = (subTotalPrice * 0.1).toFixed(2);
+    const taxAmount = parseFloat(taxAmountString);
+    setInnerText('product-tax-amount', taxAmount);
+    const totalPrice = subTotalPrice + taxAmount;
+    setInnerText('product-total-price', totalPrice);
 }
